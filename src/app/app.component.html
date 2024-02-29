@@ -1,0 +1,21 @@
+<section>
+    <div id="to-do-text-div">
+        <h1>To Do List</h1>
+    </div>
+    <div id="to-dos">
+        <div *ngFor="let item of toDos, index as i" class="to-do-and-its-num">
+            <div class="num">
+                <p>{{i+1}}</p>
+            </div>
+            <div class="to-do">
+                <p>{{item}}</p>
+            </div>
+            <button (click)="onToDoDelete($event,i)" class="to-do-delete"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </div>
+    <div id="to-do-input-div">
+        <div id="input-div">
+            <input (keyUp.enter)="onEnter($event)" type="text" placeholder="Write a task">
+        </div>
+    </div>
+</section>
