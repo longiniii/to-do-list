@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, viewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   protected toDos:Array<string> = []
-  onEnter = (event:any) => {
-    this.toDos.push(event.target.value)
+  onToDoSubmit = (event:any,viaWhat:string) => {
+    if (viaWhat == 'enterKey') {
+      this.toDos.push(event.target.value)
+    }
+    // will be added soon
+    // else if (viaWhat == "button") {
+    //   console.log(event.target.elementParen,@viewChild('toDoInput'))
+    //   this.toDos.push(event.target.elementParent@viewChild('toDoInput'))
+    // }
     event.target.value = ''
   }
   onToDoDelete = (event:any,i:number) => {

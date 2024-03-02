@@ -30,8 +30,8 @@ section {
             display: none;  
         }
         .to-do-and-its-num {
-            min-height: 56.7px;
-            height: 56.7px;
+            min-height: 40px;
+            height: 40px;
             display: flex;
             flex-flow: row wrap;
             width: 80%;
@@ -48,17 +48,17 @@ section {
                     left: 50%;
                     top: 50%;
                     transform: translate(-50%,-50%);
-                    font-size: 1.9rem;
+                    font-size: 1.7rem;
                 }
             }
             .to-do {
-                flex: 4;
+                flex: 8;
                 border-bottom: 3px dotted black;
                 position: relative;
                 p {
                     position: absolute;
                     bottom: -7px;
-                    font-size: 2.1rem;
+                    font-size: 1.8rem;
                     width: 90%;
                     white-space: nowrap;
                     overflow-x: scroll;
@@ -83,18 +83,32 @@ section {
     }
     #to-do-input-div {
         flex: 1;
+        position: relative;
         #input-div {
-            height: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            height: 40px;
             width: 81%;
-            margin: auto;
             input {
-                height: 70%;
+                height: 100%;
                 width: 100%;
                 // border: 1.7px solid rgb(251, 185, 183);
                 border: 1.7px solid rgb(255, 87, 176);
                 border-radius: 6px;
                 outline: none;
                 padding-left: 12px;
+            }
+            #submit-to-do {
+                border: none;
+                background-color: none;
+                color: rgb(255, 187, 223);
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translate(0,-50%);
+                cursor: pointer;
             }
         }
     }
