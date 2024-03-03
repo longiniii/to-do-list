@@ -6,7 +6,13 @@ import { Component, viewChild } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  protected toDos:Array<string> = []
+  public editableInput = false
+  protected toDos:Array<string> = [
+    'drink water',
+    'eat food',
+    'wash dishes',
+    'code a little'
+  ]
   public todoWhat:string = ''
   userInput = (e:any) => {
     this.todoWhat = e.target.value
@@ -20,5 +26,11 @@ export class AppComponent {
   }
   onToDoDelete = (event:any,i:number) => {
     this.toDos.splice(i,1)
+  }
+  onToDoEdit = (event:any,i:number) => {
+    this.editableInput = true
+  }
+  doneEditingInput = () => {
+    this.editableInput = false
   }
 }

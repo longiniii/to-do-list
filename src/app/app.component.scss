@@ -55,19 +55,33 @@ section {
                 flex: 8;
                 border-bottom: 3px dotted black;
                 position: relative;
-                p {
+                input {
+                    background-color: transparent;
+                    border: none;
                     position: absolute;
                     bottom: -7px;
                     font-size: 1.8rem;
-                    width: 90%;
+                    font-family: 'Cute Font', cursive;
+                    width: 83%;
                     white-space: nowrap;
                     overflow-x: scroll;
                     text-overflow: clip;
                     scrollbar-width: none;
+                    outline: none;
                 }
-                p::-webkit-scrollbar { 
+                input::-webkit-scrollbar { 
                     display: none;  
                 }
+            }
+            .to-do-edit {
+                position: absolute;
+                bottom: 7.9px;
+                font-size: 0.8rem;
+                right: 28px;
+                color: black;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
             }
             .to-do-delete {
                 position: absolute;
@@ -75,7 +89,7 @@ section {
                 font-size: 1.1rem;
                 right: 5px;
                 color: black;
-                background-color: white;
+                background-color: transparent;
                 border: none;
                 cursor: pointer;
             }
@@ -102,8 +116,8 @@ section {
             }
             #submit-to-do {
                 border: none;
-                background-color: none;
                 color: rgb(255, 187, 223);
+                background-color: transparent;
                 position: absolute;
                 right: 10px;
                 top: 50%;

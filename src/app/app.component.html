@@ -8,8 +8,9 @@
                 <p>{{i+1}}</p>
             </div>
             <div class="to-do">
-                <p>{{item}}</p>
+                <input [value]="item" [readonly]="!editableInput" [autofocus]="editableInput" (keyup.enter)="doneEditingInput()">
             </div>
+            <button (click)="onToDoEdit($event,i)" class="to-do-edit"><i class="fa-solid fa-pen-to-square"></i></button>
             <button (click)="onToDoDelete($event,i)" class="to-do-delete"><i class="fa-solid fa-xmark"></i></button>
         </div>
     </div>
