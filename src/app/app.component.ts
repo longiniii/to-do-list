@@ -23,7 +23,7 @@ export class AppComponent {
     this.toDos.splice(i,1)
   }
   onToDoEdit = (event:any,i:number) => {
-    this.editableInput = true
+    this.editableInput = !this.editableInput 
   }
   doneEditingInput = () => {
     this.editableInput = false
