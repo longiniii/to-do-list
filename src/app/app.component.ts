@@ -7,16 +7,16 @@ import { Component, viewChild } from '@angular/core';
 })
 export class AppComponent {
   protected toDos:Array<string> = []
+  public todoWhat:string = ''
+  userInput = (e:any) => {
+    this.todoWhat = e.target.value
+  }
   onToDoSubmit = (event:any,viaWhat:string) => {
-    if (viaWhat == 'enterKey') {
-      this.toDos.push(event.target.value)
+    if (this.todoWhat != '') {
+      this.toDos.push(this.todoWhat)
+      event.target.value = ''
+      this.todoWhat = ''
     }
-    // will be added soon
-    // else if (viaWhat == "button") {
-    //   console.log(event.target.elementParen,@viewChild('toDoInput'))
-    //   this.toDos.push(event.target.elementParent@viewChild('toDoInput'))
-    // }
-    event.target.value = ''
   }
   onToDoDelete = (event:any,i:number) => {
     this.toDos.splice(i,1)
