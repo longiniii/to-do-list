@@ -7,12 +7,7 @@ import { Component, viewChild } from '@angular/core';
 })
 export class AppComponent {
   public editableInput = false
-  protected toDos:Array<string> = [
-    'drink water',
-    'eat food',
-    'wash dishes',
-    'code a little'
-  ]
+  protected toDos:Array<string> = []
   public todoWhat:string = ''
   userInput = (e:any) => {
     this.todoWhat = e.target.value
