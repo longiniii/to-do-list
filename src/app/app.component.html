@@ -8,9 +8,9 @@
                 <p>{{i+1}}</p>
             </div>
             <div class="to-do">
-                <input [value]="item" [ngStyle]="{color: !editableInput ? 'black' : 'blueviolet'}" [readonly]="!editableInput" [autofocus]="editableInput" (keyup.enter)="doneEditingInput()">
+                <input [value]="item" [readonly]="!isBeingEdited[i]" (keyup.enter)="doneEditingInput(i)" [ngStyle]="{color: !isBeingEdited[i] ? 'black' : 'blueviolet'}" >
             </div>
-            <button (click)="onToDoEdit($event,i)" class="to-do-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+            <button (click)="onToDoEdit(i)" class="to-do-edit"><i class="fa-solid fa-pen-to-square"></i></button>
             <button (click)="onToDoDelete($event,i)" class="to-do-delete"><i class="fa-solid fa-xmark"></i></button>
         </div>
     </div>

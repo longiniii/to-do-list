@@ -7,8 +7,15 @@ import { Component, viewChild } from '@angular/core';
 })
 export class AppComponent {
   public editableInput = false
-  protected toDos:Array<string> = []
+  protected toDos:Array<string> = [
+    'make a dinner',
+    'drink water',
+    'kill a rabbit',
+    'study a little',
+    'code for hours'
+  ]
   public todoWhat:string = ''
+  isBeingEdited:any = [];
   userInput = (e:any) => {
     this.todoWhat = e.target.value
   }
@@ -18,14 +25,18 @@ export class AppComponent {
       event.target.value = ''
       this.todoWhat = ''
     }
+    console.log(this.isBeingEdited)
   }
   onToDoDelete = (event:any,i:number) => {
     this.toDos.splice(i,1)
+    this.isBeingEdited[i] = false
+    console.log(this.isBeingEdited)
   }
-  onToDoEdit = (event:any,i:number) => {
-    this.editableInput = !this.editableInput 
+  onToDoEdit = (i:number) => {
+    this.isBeingEdited[i] = !this.isBeingEdited[i]
+    console.log(this.isBeingEdited)
   }
-  doneEditingInput = () => {
-    this.editableInput = false
+  doneEditingInput = (i:number) => {
+    this.isBeingEdited[i] = false
   }
 }

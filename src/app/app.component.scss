@@ -13,7 +13,7 @@ section {
         flex: 1;
         h1 {
             padding: 1rem;
-            font-size: 2.5rem;
+            font-size: 1.6rem;
             text-align: center;
         }
     }
@@ -48,7 +48,7 @@ section {
                     left: 50%;
                     top: 50%;
                     transform: translate(-50%,-50%);
-                    font-size: 1.7rem;
+                    font-size: 1.1rem;
                 }
             }
             .to-do {
@@ -59,10 +59,10 @@ section {
                     background-color: transparent;
                     border: none;
                     position: absolute;
-                    bottom: -7px;
-                    font-size: 1.8rem;
-                    font-family: 'Cute Font', cursive;
-                    width: 83%;
+                    bottom: 0px;
+                    font-size: 1rem;
+                    font-family: "Lemon", serif;
+                    width: 82%;
                     white-space: nowrap;
                     overflow-x: scroll;
                     text-overflow: clip;
