@@ -7,13 +7,7 @@ import { Component, viewChild } from '@angular/core';
 })
 export class AppComponent {
   public editableInput = false
-  protected toDos:Array<string> = [
-    'make a dinner',
-    'drink water',
-    'kill a rabbit',
-    'study a little',
-    'code for hours'
-  ]
+  protected toDos:Array<string> = []
   public todoWhat:string = ''
   isBeingEdited:any = [];
   userInput = (e:any) => {
