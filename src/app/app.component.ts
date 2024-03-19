@@ -10,14 +10,10 @@ export class AppComponent {
   protected toDos:Array<string> = []
   public todoWhat:string = ''
   isBeingEdited:any = [];
-  userInput = (e:any) => {
-    this.todoWhat = e.target.value
-  }
-  onToDoSubmit = (event:any,viaWhat:string) => {
-    if (this.todoWhat != '') {
-      this.toDos.push(this.todoWhat)
-      event.target.value = ''
-      this.todoWhat = ''
+  onToDoSubmit = (input:HTMLInputElement) => {
+    if (input.value != '') {
+      this.toDos.push(input.value)
+      input.value = ''
     }
     console.log(this.isBeingEdited)
   }

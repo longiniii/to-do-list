@@ -16,8 +16,8 @@
     </div>
     <div id="to-do-input-div">
         <div id="input-div">
-            <input (input)="userInput($event)" (keyUp.enter)="onToDoSubmit($event,'enterKey')" #toDoInput type="text" placeholder="Write a task">
-            <button (click)="onToDoSubmit($event,'button')" id="submit-to-do"><i class="fa-solid fa-circle-arrow-right fa-2xl"></i></button>
+            <input #input (keyUp.enter)="onToDoSubmit(input)" #toDoInput type="text" placeholder="Write a task">
+            <button (click)="onToDoSubmit(input)" id="submit-to-do"><i class="fa-solid fa-circle-arrow-right fa-2xl"></i></button>
         </div>
     </div>
 </section>
