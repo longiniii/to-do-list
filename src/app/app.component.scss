@@ -123,6 +123,10 @@ section {
                 top: 50%;
                 transform: translate(0,-50%);
                 cursor: pointer;
+                transition-duration: 0.3s;
+                &:hover {
+                    color: rgb(255, 109, 187);
+                }
             }
         }
     }
